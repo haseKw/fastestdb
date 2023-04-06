@@ -1,6 +1,6 @@
 {
   "name": "fastestdb",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "FastestDB, manage your data!",
   "main": "index.js",
   "type": "module",
