@@ -1,0 +1,27 @@
+{
+  "name": "fastestdb",
+  "version": "1.0.0",
+  "description": "FastestDB, manage your data!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/haseKw/fastestdb.git)"
+  },
+  "keywords": [
+    "set",
+    "find",
+    "control",
+    "delete",
+    "add",
+    "remove"
+  ],
+  "author": "haseKw",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0"
+  }
+}
