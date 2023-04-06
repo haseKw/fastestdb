@@ -1,6 +1,6 @@
 {
   "name": "fastestdb",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "FastestDB, manage your data!",
   "main": "index.js",
   "type": "module",
@@ -12,12 +12,12 @@
     "url": "git+https://github.com/haseKw/fastestdb.git"
   },
   "keywords": [
-    "set",
-    "find",
-    "control",
-    "delete",
-    "add",
-    "remove"
+    "fastestdb",
+    "fastest",
+    "fast",
+    "database",
+    "fast database",
+    "set"
   ],
   "author": "haseKw",
   "license": "ISC",
