@@ -3,10 +3,8 @@
 import fs from "fs";
 import chalk from "chalk";
 
-var fileName = './database.json';
-if (!fs.existsSync(fileName)) {
-    var fileContent = "{}";
-    fs.writeFile(fileName, fileContent, (err) => {
+if (!fs.existsSync('./database.json')) {
+    fs.writeFile('./database.json', "{}", (err) => {
         if (err) throw err;
         console.log(`${chalk.bold.green("FastestDB : File successfully created!")}`);
     });
@@ -56,9 +54,7 @@ remove(veri, değer){
     dosya[veri] -= değer
     return fs.writeFileSync('database.json', JSON.stringify(dosya, null, 2))
 }
-test(){
-    console.log("This is a test command for the developer.")
-}
+
 }
 export default new fastestdb
 
