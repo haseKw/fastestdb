@@ -16,42 +16,42 @@ class fastestdb {
 
     }
 
-set(veri, değer){
+set(data, value){
     const dosya = JSON.parse(fs.readFileSync('database.json', 'utf8'))
-    dosya[veri] = değer
+    dosya[data] = value
     return fs.writeFileSync('database.json', JSON.stringify(dosya, null, 2))
 }
-find(veri){
+find(data){
     const dosya = JSON.parse(fs.readFileSync('database.json', 'utf8'))
-    if(!dosya[veri]) return console.log(`${chalk.bold.red("No such data found!")}`)
-    return dosya[veri]
+    if(!dosya[data]) return console.log(`${chalk.bold.red("No such data found!")}`)
+    return dosya[data]
 }
-control(veri) {
+control(data) {
     const dosya = JSON.parse(fs.readFileSync('database.json', 'utf8'))
-    return dosya[veri] ? true : false    
+    return dosya[data] ? true : false    
 }
-delete(veri) {
+delete(data) {
     const dosya = JSON.parse(fs.readFileSync('database.json', 'utf8'))
-    if(!dosya[veri]) return console.log(`${chalk.bold.red("No such data found!")}`)
-    delete dosya[veri]
+    if(!dosya[data]) return console.log(`${chalk.bold.red("No such data found!")}`)
+    delete dosya[data]
     return fs.writeFileSync('database.json', JSON.stringify(dosya, null, 2))
 }
-add(veri, değer){
-    if(!veri) return console.log(`${chalk.bold.red("No such data found!")}`)
-    if(typeof değer !== 'number') return console.log("Please enter a number as the value!")
-    if(!this.kontrol(veri)) return console.log("The value you entered as data was not found in the database!")
-    if(typeof this.bul(veri) !== 'number') return console.log("The value you choose to add a number must be a number!")
+add(data, value){
+    if(!data) return console.log(`${chalk.bold.red("No such data found!")}`)
+    if(typeof value !== 'number') return console.log("Please enter a number as the value!")
+    if(!this.control(data)) return console.log("The value you entered as data was not found in the database!")
+    if(typeof this.find(data) !== 'number') return console.log("The value you choose to add a number must be a number!")
     const dosya = JSON.parse(fs.readFileSync('database.json', 'utf8'))
-    dosya[veri] += değer
+    dosya[data] += value
     return fs.writeFileSync('database.json', JSON.stringify(dosya, null, 2))
 }
-remove(veri, değer){
-    if(!veri) return console.log(`${chalk.bold.red("No such data found!")}`)
-    if(typeof değer !== 'number') return console.log("Please enter a number as the value!")
-    if(!this.kontrol(veri)) return console.log("The value you entered as data was not found in the database!")
-    if(typeof this.bul(veri) !== 'number') return console.log("The value you choose to subtract a number must be a number!")
+remove(data, value){
+    if(!data) return console.log(`${chalk.bold.red("No such data found!")}`)
+    if(typeof value !== 'number') return console.log("Please enter a number as the value!")
+    if(!this.control(data)) return console.log("The value you entered as data was not found in the database!")
+    if(typeof this.find(data) !== 'number') return console.log("The value you choose to subtract a number must be a number!")
     const dosya = JSON.parse(fs.readFileSync('database.json', 'utf8'))
-    dosya[veri] -= değer
+    dosya[data] -= value
     return fs.writeFileSync('database.json', JSON.stringify(dosya, null, 2))
 }
 
