@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "(https://github.com/haseKw/fastestdb.git)"
+    "url": "git+https://github.com/haseKw/fastestdb.git"
   },
   "keywords": [
     "set",
@@ -23,5 +23,6 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.2.0"
-  }
+  },
+  "homepage": "https://github.com/haseKw/fastestdb#readme"
 }
